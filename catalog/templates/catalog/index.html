@@ -1,0 +1,21 @@
+{% extends "catalog/base.html" %}
+
+{%block title%}
+<title>Index Page</title>
+{% endblock %}
+
+{%block content%}
+<h1>Local Library</h1>
+<p>Welcome to the library dev by blackbirds </p>
+
+<h2>Contents</h2>
+<p>The library has the following record counts:</p>
+<ul>
+	<li><strong>Books:</strong>{{ num_books}}</li>
+	<li><strong>Copies:</strong>{{ num_instances}}</li>
+	<li><strong>Copies available</strong>{{ num_instances_available}}</li>
+	<li><strong>Authors:</strong>{{ num_author}}</li>
+	<li><strong>Humour:</strong>{{ num_humour}}</li>
+
+
+{% endblock %}

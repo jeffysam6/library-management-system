@@ -1,0 +1,21 @@
+{% extends "catalog/base.html" %}
+
+
+{% block content %}
+  <h1>Author Detail</h1>
+
+  <p><strong>Author:</strong> {{ author.last_name }} {{author.first_name}}</p> 
+  <p><strong>DOB:</strong> {{ date_of_birth}}</p> 
+  <p><strong>DOD:</strong> {{date_of_death}}</p>  
+  
+   <div style="margin-left:20px;margin-top:20px">
+    <h2>Books</h2>
+
+    {% for copy in author.book_set.all %}
+      <hr>
+     <h3><a href="{{copy.get_absolute_url}}">{{copy.title}}</a></h3>
+     <p>{{copy.summary}}</p>
+    {% endfor %}
+  </div>
+
+{% endblock %}
